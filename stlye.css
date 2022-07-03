@@ -150,11 +150,13 @@ article p {
 footer {
     width: 100%;
     position: fixed;
-    bottom: 61px;
+    padding-bottom: 61px;
     display: flex;
+    height: 300;
     align-items: center;
     justify-content: center;
     gap: 36px;
+    bottom: 0;
     background-color: #fff;
     z-index: 9999px;
     left: 0;
