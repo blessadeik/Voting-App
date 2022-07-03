@@ -74,7 +74,7 @@ header {
 
 
 main {
-    margin: 300px 0 0 120px;
+    margin: 300px 100px 0 120px;
     display: flex;
     flex-direction: row-reverse;
     gap: 36px;
