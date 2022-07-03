@@ -1,3 +1,10 @@
 const body = document.body
+const castBtn = document.querySelector(".btn-cast")
 
-body.innerHTML += `<p>Welcome To our the Voting App.</p>`
+castBtn.addEventListener("click", moveRight)
+
+function moveRight () {
+    castBtn.style.marginLeft = '300px';
+    castBtn.style.opacity = "0";
+    
+}
