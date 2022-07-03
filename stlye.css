@@ -17,7 +17,9 @@ header {
     height: 100px;
     position: fixed;
     top: 0;
-    z-index: 100000px;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
     background-color: #fff;
     padding: 0 117px;
     display: flex;
@@ -72,12 +74,14 @@ header {
 
 
 main {
-    margin: 300px 0 0 160px;
+    margin: 300px 0 0 120px;
     display: flex;
     flex-direction: row-reverse;
     gap: 36px;
     justify-content: space-between;
 }
+
+
 
 .techie-images {
     position: relative;
@@ -158,7 +162,7 @@ footer {
     gap: 36px;
     bottom: 0;
     background-color: #fff;
-    z-index: 9999px;
+    z-index: 9999;
     left: 0;
     right: 0;
 }
