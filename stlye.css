@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Rosario';
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: #F5F5F5;
 }
@@ -74,10 +74,10 @@ header {
 
 
 main {
-    margin: 300px 100px 0 120px;
+    margin: 300px 0 100px 90px;
     display: flex;
+    width: 100%;
     flex-direction: row-reverse;
-    gap: 36px;
     justify-content: space-between;
 }
 
@@ -86,6 +86,8 @@ main {
 .techie-images {
     position: relative;
     width: 536px;
+    height: 678px;
+    overflow: hidden;
 }
 
 .techie-images img {
