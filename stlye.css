@@ -94,7 +94,7 @@ ul a{
 /* Body */
 
 main {
-    margin: 200px 0 100px 50px;
+    margin: 200px 0 100px 20px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
