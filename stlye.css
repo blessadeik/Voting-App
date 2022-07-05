@@ -94,7 +94,7 @@ ul a{
 /* Body */
 
 main {
-    /* margin: 300px 0 100px 140px; */
+    margin: 200px 0 100px 50px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -103,19 +103,18 @@ main {
 
 
 .techie-images {
-    margin: 192px -50px 0 0;
     position: relative;
-    right: -80px;
+    width: 536px;
+    height: 678px;
     overflow: hidden;
 }
 
 .techie-images img {
-    height: 779px;
-    width:800px;
+    height: 384px;
     transition: all 2s ease-in-out;
 }
 
-/* .edwardcamp {
+.edwardcamp {
     position: absolute;
     top: 30px;
     right: 0;
@@ -126,7 +125,7 @@ main {
     width: 700px;
     top: 255px;
     left: -100px;
-} */
+}
 
 
 article {
