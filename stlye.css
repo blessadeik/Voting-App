@@ -94,8 +94,9 @@ ul a{
 /* Body */
 
 main {
-    margin: 200px 0 100px 20px;
+    margin: 200px 0 100px 50px;
     display: flex;
+    width: 100%;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
@@ -129,7 +130,6 @@ main {
 
 
 article {
-    margin: 300px 0 0 160px;
     max-width: 660px;
 }
 
@@ -138,10 +138,8 @@ article h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 80px;
-    width: 658px;
     line-height: 100%;
     color: #F09427;
-    padding-bottom: 66px;
 }
 
 article p {
@@ -151,9 +149,8 @@ article p {
     font-size: 20px;
     line-height: 100%;
     color: #434259;
+    margin-top: 66px;
     width: 526px;
-    padding-bottom: 30px;
-
 }
 
 .btn-cast {
@@ -168,6 +165,7 @@ article p {
     font-size: 20px;
     line-height: 24px;
     color: #F5F5F5;
+    margin-top: 40px;
     transition: all 2s ease-in-out;
 }
 
