@@ -10,7 +10,8 @@ body {
     width: 100%;
     height: max-content;
     background-color: #F5F5F5;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
@@ -57,8 +58,12 @@ ul a{
 }
 
 .nav-list.opened {
-    color: #F09427;
+    color: #434259;
     font-weight: 700;
+}
+
+.nav-list.opened a:active{
+    color:#F09427;
 }
 
 .nav-list {
@@ -80,7 +85,7 @@ ul a{
     font-weight: 700;
 }
 
-.nav-list.vote:active{
+.nav-list.vote a:active{
     background: #F19426;
     color: #f5f5f5;
 }
@@ -226,4 +231,135 @@ footer {
 .social-icons {
     display: flex;
     gap: 30px;
+}
+
+/* voting Page */
+
+.voting_content {
+    margin: 216px 203px 0 80px;
+    padding-bottom: 80px;
+    display: grid;
+    column-gap:60px;
+    justify-content: space-around;
+}
+
+    /* sidebar */
+.sidebar{
+    position: fixed;
+    border-right: 3px solid #434259;
+    height: max-content;
+    width:max-content;
+}
+
+.sidebar ul{
+    text-align: left;
+}
+
+.sidebar li{
+    list-style: none;
+    color: #434259;
+    opacity: 0.4;
+    padding-bottom: 31px;
+    padding-right: 10px;
+}
+
+.sidebar li:active{
+    color: #434259;
+    opacity: none;
+}
+    /* main content */
+.main_content{
+    display: grid;
+    row-gap: 65px;
+    width: 1200px;
+    height: max-content;
+}
+
+.voting_section_card{
+    width: 1000px;
+    height: max-content;
+    background:#ffffff;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding:50px 0px 50px 100px;
+}
+
+.voting_section_card h2{
+    font-weight: 700;
+    font-size:26px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #F09427;
+    padding-bottom: 50px;
+    text-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+}
+
+.instructions{
+    padding-left: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #434259;
+}
+
+.instructions li{
+    list-style-image: url('/image/diamond.svg' ) ;
+    padding: 14px 0px 0px 28px
+        
+}
+.check{
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 32px;
+}
+
+#agree{
+    color: #F09427;
+}
+    /* Button */
+.btn_in_voting{
+    text-align: center;
+    margin: 40px 0px 100px 0px;  
+}
+
+.btn_in_voting_ss {
+    text-align: center;
+    margin: 60px 0px 0px 0px;
+}
+.init_btn{
+    background: #161616;
+    opacity: 0.4;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight:700;
+    padding:11px 16px 10px 15px;
+}
+
+.note_vin{
+    font-weight: 700;
+    padding-bottom: 18px;
+    opacity: 0.4;
+
+}
+
+.note_ss{
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0.4;
+    margin-bottom:50px
+}
+
+.map_img{
+    text-align: center;
+}
+
+.nominee_cards{
+    display: grid;
+    column-gap:300px;
+    justify-content: space-around;
+}
+
+.card{
+
 }

@@ -8,26 +8,92 @@
     <link rel="stylesheet" href="/stlye.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/image/VoteTechie (2) 1logo.svg" alt="">
+    <div>
+        <header>
+            <div class="logo">
+                <img src="/image/VoteTechie (2) 1logo.svg" alt="">
+            </div>
+        
+            <nav>
+                <ul class="menu">
+                    <a href="index.html">
+                        <li class="nav-list opened">Home</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-list">About</li>
+                    </a>
+                    <a href="vote_cast.html">
+                        <li class="nav-list vote">Vote</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="voting_content">
+            <div class="sidebar">
+                <ul>
+                    <li>Voting Instructions</li>
+                    <li>Select State</li>  
+                    <li>Select Tech Lord</li>
+                    <li>Completed</li>
+                </ul>
+            </div>
+
+            <div class="main_content">
+                <div class="voting_section_card">
+                    <h2>VOTING INSTRUCTIONS</h2>
+                    <div class="instructions">
+                        Welcome to the VoteTechie platform. Here are the steps to follow to enable you vote your Favourite Tech Lord
+                        <ul>
+                            <li>Select State you are Voting From</li>
+                            <li>Select Tech Lord you are Voting For</li>
+                            <li>Click on Vote</li>
+                        </ul>
+                    </div>
+
+                    <p class="check">
+                        <input type="checkbox" name="agree" id="agree">
+                        <label for="agree">I have read the voting instructions
+                            
+                        </label>
+                    </p>
+                    <div class="btn_in_voting">
+                        <button class="init_btn">CONFIRM</button>
+                    </div>
+                    
+
+                    <p class="note_vin">Note that you can only vote once as there is a limit to the number of people that can vote in each state</p>
+                </div>
+
+                <div class="voting_section_card">
+                    <h2>SELECT STATE</h2>
+                    <p class="note_ss">Select your state from the map</p>
+                    <div class="map_img">
+                        <object data="/image/map 1map.svg" type="img" width="600px" height="400px"></object>
+                    </div>
+                    <div class="btn_in_voting_ss">
+                        <button class="init_btn" id="state_select_btn">CONTINUE</button>
+                    </div>
+                    
+                </div>
+
+                <div class="voting_section_card">
+                    <h2>SELECT TECH LORD</h2>
+                    <p class="note_ss">Select the TechLord you are voting for</p>
+                    <div class="nominee_cards">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    <div class="btn_in_voting_ss">
+                        <button class="init_btn" id="vote_nominee_btn">VOTE</button>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     
-        <nav>
-            <ul class="menu">
-                <a href="index.html">
-                    <li class="nav-list opened">Home</li>
-                </a>
-                <a href="#">
-                    <li class="nav-list">About</li>
-                </a>
-                <a href="vote_cast.html">
-                    <li class="nav-list vote">Vote</li>
-                </a>
-            </ul>
-        </nav>
-    </header>
-    
+
     
     
    <script src="app.js"></script> 
