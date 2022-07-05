@@ -7,11 +7,15 @@
 
 body {
     font-family: 'Rosario';
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: max-content;
     background-color: #F5F5F5;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
+
+/* Header */
 header {
     width: 100%;
     height: 100px;
@@ -48,9 +52,18 @@ header {
     color: #434259;
 }
 
+ul a{
+    text-decoration: none;
+    color: #434259;
+}
+
 .nav-list.opened {
-    color: #F09427;
+    color: #434259;
     font-weight: 700;
+}
+
+.nav-list.opened a:active{
+    color:#F09427;
 }
 
 .nav-list {
@@ -67,17 +80,28 @@ header {
     align-items: center;
     height: 35px;
     color: #fff;
+    cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     font-weight: 700;
+    transition: all 3s10 ease-out ;
 }
 
+.nav-list.vote:active{
+    background: #F19426;
+    color: #f5f5f5;
+    transform: translateY(3px);
+}
+
+
+/* Body */
 
 main {
     margin: 200px 0 100px 50px;
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -155,18 +179,12 @@ article p {
 
 footer {
     width: 100%;
-    position: fixed;
-    padding-bottom: 61px;
+    position: relative;
+    margin-bottom: 61px; 
     display: flex;
-    height: 300;
     align-items: center;
     justify-content: center;
     gap: 36px;
-    bottom: 0;
-    background-color: #fff;
-    z-index: 9999;
-    left: 0;
-    right: 0;
 }
 
 .live {
@@ -214,4 +232,179 @@ footer {
 .social-icons {
     display: flex;
     gap: 30px;
+}
+
+/* voting Page */
+
+.voting_content {
+    margin: 216px 203px 0 40px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap:60px;
+}
+
+    /* sidebar */
+.sidebar{
+    position: fixed;
+    border-right: 3px solid #434259;
+    height: max-content;
+    width: max-content;
+}
+
+.sidebar ul{
+    text-align: left;
+}
+
+.sidebar li{
+    list-style: none;
+    color: #434259;
+    opacity: 0.4;
+    padding-bottom: 31px;
+    padding-right: 10px;
+}
+
+.sidebar li:active{
+    color: #434259;
+    opacity: none;
+}
+    /* main content */
+
+.the_main_content{
+    float: right;
+    margin:auto;
+}
+.main_content{
+    display: grid;
+    row-gap: 65px;
+    width: 1200px;
+    height: max-content;
+}
+
+.voting_section_card{
+    width: 1000px;
+    height: max-content;
+    background:#ffffff;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding:50px 0px 50px 100px;
+}
+
+.voting_section_card h2{
+    font-weight: 700;
+    font-size:26px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #F09427;
+    padding-bottom: 50px;
+    text-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+}
+
+.instructions{
+    padding-left: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #434259;
+}
+
+.instructions li{
+    list-style-image: url('/image/diamond.svg' ) ;
+    padding: 14px 0px 0px 28px
+        
+}
+.check{
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 32px;
+}
+
+#agree{
+    color: #F09427;
+}
+    /* Button */
+.btn_in_voting{
+    text-align: center;
+    margin: 40px 0px 100px 0px;  
+}
+
+.btn_in_voting_ss {
+    text-align: center;
+    margin: 60px 0px 0px 0px;
+}
+.init_btn{
+    background: #161616;
+    opacity: 0.4;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight:700;
+    padding:11px 16px 10px 15px;
+    cursor: pointer;
+}
+
+.note_vin{
+    font-weight: 700;
+    padding-bottom: 18px;
+    opacity: 0.4;
+
+}
+
+.note_ss{
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0.4;
+    margin-bottom:50px
+}
+
+.map_img{
+    text-align: center;
+    cursor: pointer;
+}
+
+.nominee_cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*#select_techlord_section{
+
+}*/
+
+.card{
+    height: 310px;
+    width: 250px;
+    border-radius: 10px;
+    filter: saturate(0%);
+    cursor: pointer;
+}
+
+.tech_img{
+    margin-bottom: 10px;
+}
+
+.tech_img img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tech_lord_name{
+    text-align: center;
+    background:#008000;
+    color: #ffffff;
+    height: 50px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+
+    .menu {
+        gap: 15px;
+    }
 }
