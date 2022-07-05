@@ -399,4 +399,8 @@ footer {
     main {
         flex-direction: column;
     }
+    
+    .menu {
+        gap: 15px;
+    }
 }
