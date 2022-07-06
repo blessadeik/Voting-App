@@ -62,7 +62,7 @@ ul a{
     font-weight: 700;
 }
 
-.nav-list.opened a:active{
+.nav-list.opened{
     color:#F09427;
 }
 
@@ -236,54 +236,52 @@ footer {
 /* voting Page */
 
 .voting_content {
-    margin: 216px 203px 0 40px;
-    padding-bottom: 80px;
+    padding: 140px 80px 80px 40px;
     display: flex;
     flex-direction: row;
+    background-color: yellow;
     justify-content:space-between;
     gap:60px;
 }
 
-    /* sidebar */
+/* sidebar */
 .sidebar{
-    position: fixed;
     border-right: 3px solid #434259;
     height: max-content;
-    width: max-content;
 }
 
 .sidebar ul{
     text-align: left;
+    list-style: none;
+    padding: 0;
+    width: 180px;
 }
 
 .sidebar li{
-    list-style: none;
-    color: #434259;
-    opacity: 0.4;
+    color: rgba(67, 66, 89, 0.4);
     padding-bottom: 31px;
-    padding-right: 10px;
 }
 
-.sidebar li:active{
-    color: #434259;
-    opacity: none;
+.sidebar li.active{
+    color: rgba(67, 66, 89);
 }
     /* main content */
 
-.the_main_content{
-    float: right;
-    margin:auto;
-}
+
 .main_content{
     display: grid;
     row-gap: 65px;
-    width: 1200px;
-    height: max-content;
+    flex: 1;
+}
+
+.voting_section_card.display {
+    display: block;
 }
 
 .voting_section_card{
-    width: 1000px;
+    width: 100%;
     height: max-content;
+    display: none;
     background:#ffffff;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -324,7 +322,7 @@ footer {
     /* Button */
 .btn_in_voting{
     text-align: center;
-    margin: 40px 0px 100px 0px;  
+    margin: 40px 0px 40px 0px;  
 }
 
 .btn_in_voting_ss {
@@ -343,6 +341,11 @@ footer {
     cursor: pointer;
 }
 
+#read_confirm.clicked {
+    background-color: #F09427;
+    opacity: 1;
+}
+
 .note_vin{
     font-weight: 700;
     padding-bottom: 18px;
@@ -354,7 +357,8 @@ footer {
     font-weight: 700;
     font-size: 14px;
     opacity: 0.4;
-    margin-bottom:50px
+
+    margin-bottom: 30px;
 }
 
 .map_img{
@@ -362,6 +366,11 @@ footer {
     cursor: pointer;
 }
 
+/* selecting techie class */
+
+.tech-select {
+    padding-bottom: 50px;
+}
 .nominee_cards{
     display: flex;
     flex-direction: row;
@@ -381,7 +390,7 @@ footer {
 }
 
 .tech_img{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .tech_img img{
@@ -396,6 +405,10 @@ footer {
     color: #ffffff;
     height: 50px;
     border-radius: 0px 0px 10px 10px;
+}
+
+.btn_in_voting_ss {
+    margin-top: 10px;
 }
 
 @media (max-width: 900px) {

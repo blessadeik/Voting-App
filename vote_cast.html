@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting App:Vote</title>
     <link rel="stylesheet" href="/stlye.css">
+    <script src="/html5usmapv4.1_branded/mapdata.js"></script>
+    <script src="/html5usmapv4.1_branded/usmap.js"></script>
 </head>
 <body>
-    <div>
         <header>
             <div class="logo">
                 <img src="/image/VoteTechie (2) 1logo.svg" alt="">
@@ -17,7 +18,7 @@
             <nav>
                 <ul class="menu">
                     <a href="index.html">
-                        <li class="nav-list opened">Home</li>
+                        <li class="nav-list">Home</li>
                     </a>
                     <a href="#">
                         <li class="nav-list">About</li>
@@ -31,85 +32,82 @@
 
         <div class="voting_content">
             <div class="sidebar">
-                <ul>
-                    <li>Voting Instructions</li>
+                <ul class="side-list">
+                    <li class="active">Voting Instructions</li>
                     <li>Select State</li>  
                     <li>Select Tech Lord</li>
                     <li>Completed</li>
                 </ul>
             </div>
 
-            <div class="the_main_content">
-                <div class="main_content">
-                    <div class="voting_section_card">
-                        <h2>VOTING INSTRUCTIONS</h2>
-                        <div class="instructions">
-                            Welcome to the VoteTechie platform. Here are the steps to follow to enable you vote your Favourite Tech Lord
-                            <ul>
-                                <li>Select State you are Voting From</li>
-                                <li>Select Tech Lord you are Voting For</li>
-                                <li>Click on Vote</li>
-                            </ul>
-                        </div>
-
-                        <p class="check">
-                            <input type="checkbox" name="agree" id="agree">
-                            <label for="agree">I have read the voting instructions
-                                
-                            </label>
-                        </p>
-                        <div class="btn_in_voting">
-                            <button class="init_btn">CONFIRM</button>
-                        </div>
-                        
-
-                        <p class="note_vin">Note that you can only vote once as there is a limit to the number of people that can vote in each state</p>
+            
+            <div class="main_content">
+                <div class="voting_section_card display">
+                    <h2>VOTING INSTRUCTIONS</h2>
+                    <div class="instructions">
+                        Welcome to the VoteTechie platform. Here are the steps to follow to enable you vote your Favourite Tech Lord
+                        <ul>
+                            <li>Select State you are Voting From</li>
+                            <li>Select Tech Lord you are Voting For</li>
+                            <li>Click on Vote</li>
+                        </ul>
                     </div>
 
-                    <div class="voting_section_card">
-                        <h2>SELECT STATE</h2>
-                        <p class="note_ss">Select your state from the map</p>
-                        <div class="map_img" style="max-width: 700px">
-                            <div id="map"></div>                       
-                        </div>
-                        <div class="btn_in_voting_ss">
-                            <button class="init_btn" id="state_select_btn">CONTINUE</button>
-                        </div>
-                        
+                    <p class="check">
+                        <input type="checkbox" name="agree" id="agree">
+                        <label for="agree">I have read the voting instructions
+                            
+                        </label>
+                    </p>
+                    <div class="btn_in_voting">
+                        <button class="init_btn" id="read_confirm">CONFIRM</button>
                     </div>
+                    
+                    <p class="note_vin">Note that you can only vote once as there is a limit to the number of people that can vote in each state</p>
+                </div>
 
-                    <div class="voting_section_card">
-                        <h2>SELECT TECH LORD</h2>
-                        <p class="note_ss">Select the TechLord you are voting for</p>
-                        <div class="nominee_cards" id="select_techlord_section">
-                            <div class="card">
-                                <div class="tech_img">
-                                    <img src="/image/Elon-Musk 2.png" alt="">
-                                </div>
-                                <div class="tech_lord_name"> Elon Musk</div>
-                            </div>
+                <div class="voting_section_card">
+                    <h2>SELECT STATE</h2>
+                    <p class="note_ss">Select your state from the map</p>
+                    <div style="max-width: 500px"> <!-- Keep map above fold -->
+                        <div id="map"></div>
+                    </div>
+                    <div class="btn_in_voting_ss">
+                        <button class="init_btn" id="state_select_btn">CONTINUE</button>
+                    </div>
+                    
+                </div>
 
-                            <div class="card">
-                                <div class="tech_img">
-                                    <img src="/image/edward 2.png" alt="">
-                                </div>
-                                
-                                <div class="tech_lord_name"> Edward Campbell </div>
+                <div class="voting_section_card">
+                    <h2 class="tech-select">SELECT TECH LORD</h2>
+                    <p class="note_ss">Select the TechLord you are voting for</p>
+                    <div class="nominee_cards" id="select_techlord_section">
+                        <div class="card">
+                            <div class="tech_img">
+                                <img src="/image/Elon-Musk 2.png" alt="">
                             </div>
+                            <div class="tech_lord_name"> Elon Musk</div>
                         </div>
-                        <div class="btn_in_voting_ss">
-                            <button class="init_btn" id="vote_nominee_btn">VOTE</button>
+
+                        <div class="card">
+                            <div class="tech_img">
+                                <img src="/image/edward 2.png" alt="">
+                            </div>
+                            
+                            <div class="tech_lord_name"> Edward Campbell </div>
                         </div>
+                    </div>
+                    <div class="btn_in_voting_ss">
+                        <button class="init_btn" id="vote_nominee_btn">VOTE</button>
                     </div>
                 </div>
-            </div>            
+            </div>         
             
         </div>
-    </div>
 
     <script src="/html5usmapv4.1_branded/usmap.js"></script>
    <script src="/html5usmapv4.1_branded/mapdata.js"></script>
-   <script src="app.js"></script> 
+   <script src="votingapp.js"></script> 
    
 </body>
 </html>
