@@ -42,3 +42,23 @@ function nextPage () {
     sideList[inPage].classList.add('active')
     mainContent[inPage].classList.add('display')
 }
+
+
+// modifying the map
+
+const mapState = document.querySelector("svg").children
+
+
+let stateArr = [];
+
+for(let i = 1; i < 57; i++){
+    stateArr.push(mapState[i])
+}
+
+console.log(stateArr)
+
+stateArr.forEach((state) => {
+    state.addEventListener('click', () => {
+        console.log(state.className)
+    })
+})
