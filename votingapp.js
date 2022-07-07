@@ -1,5 +1,5 @@
 
-// active button checked if the instructions have been read
+// moving from one slide to the next
 
 const agreeCheck = document.querySelector("#agree")
 const agreeBtn = document.querySelector("#read_confirm")
@@ -47,6 +47,9 @@ function nextPage () {
 // modifying the map
 
 const mapState = document.querySelector("svg").children
+const countryDisplay = document.querySelector("#country-select")
+const selectCountryBtn = document.querySelector("#state_select_btn")
+const clearCountry = document.getElementById('clear-country')
 
 
 let stateArr = [];
@@ -56,9 +59,40 @@ for(let i = 1; i < 57; i++){
 }
 
 console.log(stateArr)
+let countryToDisplay;
+
+console.log(countryToDisplay)
 
 stateArr.forEach((state) => {
     state.addEventListener('click', () => {
-        console.log(state.className)
+        countryToDisplay = state.id
+
+        
+            countryDisplay.textContent = countryToDisplay;
+            clearCountry.style.display = "inline";
+            console.log(countryToDisplay)
+            
+            if (countryToDisplay === "" || countryToDisplay === undefined || countryToDisplay === null || countryToDisplay === false) {
+                selectCountryBtn.removeEventListener('click', nextPage)
+                selectCountryBtn.classList.remove('clicked')
+            }  else {
+                selectCountryBtn.addEventListener('click', nextPage)
+                selectCountryBtn.classList.add('clicked')
+            }
+
+            //adding eventlistener to clear selected country
+            clearCountry.addEventListener('click', () => {
+                countryToDisplay = ""
+
+                countryDisplay.textContent = countryToDisplay;
+                clearCountry.style.display = "none";
+                selectCountryBtn.classList.remove('clicked')
+                selectCountryBtn.removeEventListener('click', nextPage)
+            })
+
     })
 })
+
+
+
+// the making of the last vote-techie slides
