@@ -91,6 +91,11 @@ stateArr.forEach((state) => {
             })
 
     })
+
+    state.addEventListener("mouseover", () => {
+        state.setAttribute("title", state.getAttribute('id'))
+        countryDisplay.textContent = state.getAttribute('title')
+    })
 })
 
 
