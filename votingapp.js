@@ -70,6 +70,8 @@ stateArr.forEach((state) => {
         
             countryDisplay.textContent = countryToDisplay;
             clearCountry.style.display = "inline";
+            displayCountry.textContent = countryToDisplay;
+            countryClear.style.display = "inline";
             console.log(countryToDisplay)
             
             if (countryToDisplay === "" || countryToDisplay === undefined || countryToDisplay === null || countryToDisplay === false) {
@@ -101,3 +103,6 @@ stateArr.forEach((state) => {
 
 
 // the making of the last vote-techie slides
+const displayCountry = document.getElementById("countr-select")
+const countryClear = document.getElementById("clear-countr")
+
