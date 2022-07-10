@@ -91,12 +91,6 @@ stateArr.forEach((state) => {
                 selectCountryBtn.classList.remove('clicked')
                 selectCountryBtn.removeEventListener('click', nextPage)
             })
-
-    })
-
-    state.addEventListener("mouseover", () => {
-        state.setAttribute("title", state.getAttribute('id'))
-        countryDisplay.textContent = state.getAttribute('title')
     })
 })
 
