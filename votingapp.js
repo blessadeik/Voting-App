@@ -226,25 +226,35 @@ edwardCard.addEventListener('click', () => {
 })
 
 //vote botton for card
+const techieName = document.getElementById('techie')
+const countryFrom = document.getElementById('country-from')
 
 function voteElon(){
     let signCountry = allCountryAgain.indexOf(countryToDisplay)
 
-    window.open('/congrate_page.html')
+    techieName.textContent = 'ELON MUSK';
+    countryFrom.textContent = countryToDisplay;
+
+    startConfetti();
 
     ++voteStore[signCountry].ElonCount
     ++totalElon
-
+    nextPage()
     storeLS()
 }
 
 function voteEdward(){
     let signCountry = allCountryAgain.indexOf(countryToDisplay)
 
-    window.open('/congrate_page.html')
+    techieName.textContent = 'EDWARD CAMPBELL';
+    countryFrom.textContent = countryToDisplay;
+
+    startConfetti();
 
     ++voteStore[signCountry].EdwardCount
     ++totalEdward
+
+    nextPage()
 
     storeLS()
 }
