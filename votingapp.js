@@ -58,10 +58,7 @@ for(let i = 1; i < 57; i++){
     stateArr.push(mapState[i])
 }
 
-console.log(stateArr)
 let countryToDisplay;
-
-console.log(countryToDisplay)
 
 stateArr.forEach((state) => {
     state.addEventListener('click', () => {
@@ -72,7 +69,6 @@ stateArr.forEach((state) => {
             clearCountry.style.display = "inline";
             displayCountry.textContent = countryToDisplay;
             countryClear.style.display = "inline";
-            console.log(countryToDisplay)
             
             if (countryToDisplay === "" || countryToDisplay === undefined || countryToDisplay === null || countryToDisplay === false) {
                 selectCountryBtn.removeEventListener('click', nextPage)
@@ -99,4 +95,45 @@ stateArr.forEach((state) => {
 // the making of the last vote-techie slides
 const displayCountry = document.getElementById("countr-select")
 const countryClear = document.getElementById("clear-countr")
+const elonCard = document.querySelector("#elon-side")
+const edwardCard = document.querySelector("#edward-side")
+const voteBtn = document.getElementById('vote_nominee_btn')
 
+// storing vote
+let voteStore = [
+
+]
+
+function StateObj() {
+    this.ElonCount = ""
+    this.EdwardCount = ""
+}
+
+countryClear.addEventListener('click', () => {
+    sideList[inPage].classList.remove('active')
+    mainContent[inPage].classList.remove('display')
+
+    inPage--
+
+    
+    sideList[inPage].classList.add('active')
+    mainContent[inPage].classList.add('display')
+    countryToDisplay = ""
+    countryDisplay.textContent = countryToDisplay;
+    clearCountry.style.display = "none";
+    selectCountryBtn.classList.remove('clicked')
+    selectCountryBtn.removeEventListener('click', nextPage)
+
+})
+
+
+elonCard.addEventListener('click', () => {
+    edwardCard.classList.remove('carder')
+
+    elonCard.classList.add('carder')
+    console.log(elonCard.children[1].textContent)
+
+    let selectedState = countryToDisplay
+
+    selectedState 
+})
