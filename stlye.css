@@ -163,6 +163,7 @@ main {
 
 article {
     max-width: 660px;
+    width: 100%;
 }
 
 article h2 {
