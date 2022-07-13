@@ -1,3 +1,15 @@
+//menu open and close
+
+const menuIcon = document.querySelector('.menu-icon')
+const nav = document.querySelector('nav')
+const header = document.querySelector('header')
+
+menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('active')
+        nav.classList.toggle('active')
+        header.classList.toggle('active')
+})
+
 
 // moving from one slide to the next
 
@@ -49,7 +61,7 @@ function nextPage () {
 
 // modifying the map
 
-const mapState = document.querySelector("svg").children
+const mapState = document.querySelector(".svg-one").children
 const countryDisplay = document.querySelector("#country-select")
 const selectCountryBtn = document.querySelector("#state_select_btn")
 const clearCountry = document.getElementById('clear-country')
@@ -130,14 +142,20 @@ countryClear.addEventListener('click', () => {
 // storing vote
 let voteStore = []
 
+for (let i = 0; i < allCountry.length; i++){
+    voteStore.push(allCountry[i] = new StateObj())
+}
+
+
+
 let totalElon = 0
 let totalEdward = 0
 
-let totalVote = totalEdward + totalElon;
+let totalVote = totalElon + totalEdward ;
 
 //function so store in Local Storage
 function storeLS () {
-    // localStorage.setItem('votedStore', voteStore)
+    localStorage.setItem('votedStore', JSON.stringify(voteStore))
     localStorage.setItem('elTotal', totalElon)
     localStorage.setItem('edTotal', totalEdward)
     localStorage.setItem('votedTotal', totalVote)
@@ -148,19 +166,29 @@ function storeLS () {
 let elTotal = localStorage.getItem('elTotal')
 
 if (elTotal) {
-    totalElon = elTotal
+    totalElon = Math.floor(elTotal)
 }
 
 let edTotal = localStorage.getItem('edTotal')
 
 if (edTotal) {
-    totalEdward = edTotal
+    totalEdward = Math.floor(edTotal)
 }
 
 let votedTotal = localStorage.getItem('votedTotal')
 
 if (votedTotal) {
     totalVote = votedTotal
+}
+
+console.log(totalElon)
+console.log(totalEdward)
+console.log(totalElon + totalEdward)
+
+let voteStoreLS = localStorage.getItem('votedStore');
+
+if (voteStoreLS) {
+    voteStore = JSON.parse(voteStoreLS)
 }
 
 //class Constructor for objects
@@ -174,9 +202,6 @@ function StateObj() {
 
 // console.log(ibadan)
 
-for (let i = 0; i < allCountry.length; i++){
-    voteStore.push(allCountry[i] = new StateObj())
-}
 
 
 countryClear.addEventListener('click', () => {
@@ -257,4 +282,269 @@ function voteEdward(){
     nextPage()
 
     storeLS()
+}
+
+
+// delete later
+let madKeh = {
+    HI: {
+      name: "Hawaii",
+      color: "#88A4BC"
+    },
+    AK: {
+      name: "Alaska",
+      color: "#88A4BC"
+    },
+    FL: {
+      name: "Florida",
+      color: "#88A4BC"
+    },
+    NH: {
+      name: "New Hampshire",
+      color: "#88A4BC"
+    },
+    VT: {
+      name: "Vermont",
+      color: "#88A4BC"
+    },
+    ME: {
+      name: "Maine",
+      color: "#88A4BC"
+    },
+    RI: {
+      name: "Rhode Island",
+      color: "#88A4BC"
+    },
+    NY: {
+      name: "New York",
+      color: "#88A4BC"
+    },
+    PA: {
+      name: "Pennsylvania",
+      color: "#88A4BC"
+    },
+    NJ: {
+      name: "New Jersey",
+      color: "#88A4BC"
+    },
+    DE: {
+      name: "Delaware",
+      color: "#88A4BC"
+    },
+    MD: {
+      name: "Maryland",
+      color: "#88A4BC"
+    },
+    VA: {
+      name: "Virginia",
+      color: "#88A4BC"
+    },
+    WV: {
+      name: "West Virginia",
+      color: "#88A4BC"
+    },
+    OH: {
+      name: "Ohio",
+      color: "#88A4BC"
+    },
+    IN: {
+      name: "Indiana",
+      color: "#88A4BC"
+    },
+    IL: {
+      name: "Illinois",
+      color: "#88A4BC"
+    },
+    CT: {
+      name: "Connecticut",
+      color: "#88A4BC"
+    },
+    WI: {
+      name: "Wisconsin",
+      color: "#88A4BC"
+    },
+    NC: {
+      name: "North Carolina",
+      color: "#88A4BC"
+    },
+    DC: {
+      name: "District of Columbia",
+      color: "#88A4BC"
+    },
+    MA: {
+      name: "Massachusetts",
+      color: "#88A4BC"
+    },
+    TN: {
+      name: "Tennessee",
+      color: "#88A4BC"
+    },
+    AR: {
+      name: "Arkansas",
+      color: "#88A4BC"
+    },
+    MO: {
+      name: "Missouri",
+      color: "#88A4BC"
+    },
+    GA: {
+      name: "Georgia",
+      color: "#88A4BC"
+    },
+    SC: {
+      name: "South Carolina",
+      color: "#88A4BC"
+    },
+    KY: {
+      name: "Kentucky",
+      color: "#88A4BC"
+    },
+    AL: {
+      name: "Alabama",
+      color: "#88A4BC"
+    },
+    LA: {
+      name: "Louisiana",
+      color: "#88A4BC"
+    },
+    MS: {
+      name: "Mississippi",
+      color: "#88A4BC"
+    },
+    IA: {
+      name: "Iowa",
+      color: "#88A4BC"
+    },
+    MN: {
+      name: "Minnesota",
+      color: "#88A4BC"
+    },
+    OK: {
+      name: "Oklahoma",
+      color: "#88A4BC"
+    },
+    TX: {
+      name: "Texas",
+      color: "#88A4BC"
+    },
+    NM: {
+      name: "New Mexico",
+      color: "#88A4BC"
+    },
+    KS: {
+      name: "Kansas",
+      color: "#88A4BC"
+    },
+    NE: {
+      name: "Nebraska",
+      color: "#88A4BC"
+    },
+    SD: {
+      name: "South Dakota",
+      color: "#88A4BC"
+    },
+    ND: {
+      name: "North Dakota",
+      color: "#88A4BC"
+    },
+    WY: {
+      name: "Wyoming",
+      color: "#88A4BC"
+    },
+    MT: {
+      name: "Montana",
+      color: "#88A4BC"
+    },
+    CO: {
+      name: "Colorado",
+      color: "#88A4BC"
+    },
+    UT: {
+      name: "Utah",
+      color: "#88A4BC"
+    },
+    AZ: {
+      name: "Arizona",
+      color: "#88A4BC"
+    },
+    NV: {
+      name: "Nevada",
+      color: "#88A4BC"
+    },
+    OR: {
+      name: "Oregon",
+      color: "#88A4BC"
+    },
+    WA: {
+      name: "Washington",
+      color: "#88A4BC"
+    },
+    CA: {
+      name: "California",
+      color: "#88A4BC"
+    },
+    MI: {
+      name: "Michigan",
+      color: "#88A4BC"
+    },
+    ID: {
+      name: "Idaho",
+      color: "#88A4BC"
+    },
+    GU: {
+      name: "Guam",
+      hide: "yes",
+      color: "#88A4BC"
+    },
+    VI: {
+      name: "Virgin Islands",
+      hide: "yes",
+      color: "#88A4BC"
+    },
+    PR: {
+      name: "Puerto Rico",
+      hide: "yes",
+      color: "#88A4BC"
+    },
+    MP: {
+      name: "Northern Mariana Islands",
+      hide: "yes",
+      color: "#88A4BC"
+    },
+    AS: {
+      name: "American Samoa",
+      hide: "yes",
+      color: "#88A4BC"
+    }
+};
+console.log(madKeh.AK.color)
+
+//to reload/revote
+function reVote() {
+        sideList[inPage].classList.remove('active')
+        mainContent[inPage].classList.remove('display')
+        agreeCheck.checked = false;
+    
+        inPage = 0
+    
+        
+        sideList[inPage].classList.add('active')
+        mainContent[inPage].classList.add('display')
+
+        
+        countryToDisplay = ""
+        countryDisplay.textContent = countryToDisplay;
+        clearCountry.style.display = "none";
+        agreeCheck.checked = false
+        agreeBtn.classList.remove('clicked')
+        agreeBtn.removeEventListener('click', nextPage)
+        selectCountryBtn.classList.remove('clicked')
+        selectCountryBtn.removeEventListener('click', nextPage)
+        voteBtn.classList.remove('clicked')
+        voteBtn.removeEventListener('click', nextPage)
+
+        elonCard.classList.remove('carder')
+        edwardCard.classList.remove('carder')
+
+        stopConfetti();
 }

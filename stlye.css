@@ -183,7 +183,8 @@ article p {
     line-height: 100%;
     color: #434259;
     margin-top: 66px;
-    width: 526px;
+    max-width: 526px;
+    width: 100%;
 }
 
 .btn-cast {
@@ -314,7 +315,7 @@ footer {
     background:#ffffff;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding:50px 0px 50px 100px;
+    padding:50px  100px;
 }
 
 .voting_section_card h2{
@@ -503,6 +504,66 @@ footer {
     }
 }
 
+/* last slide style */
+.last-head {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #008000;
+    text-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+}
+
+.candidate-image {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.candidate-image img {
+    width: 150px;
+}
+
+
+.progress-bar {
+    width: 100%;
+    margin-top: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.elon-bar {
+    width: 45%;
+    background-color: rgb(0, 0, 255);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 20px;
+}
+
+.elon-count,
+.edward-count {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'lucida Sans';
+}
+
+.edward-bar {
+    width: 55%;
+    background-color: rgb(255, 0, 0);
+    padding: 0 20px;
+    text-align: right;
+    color: #fff;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
 @media (max-width: 589px) {
     .techie-images {
         transform: scale(min(0.9));
@@ -516,8 +577,9 @@ footer {
 }
 
 
-@media (max-width: 1033px) and (min-width: 900px) {
+@media (min-width: 900px) and (max-width: 1420px) {
+
     article {
-        width: 440%;
+        width: 48%;
     }
 }
