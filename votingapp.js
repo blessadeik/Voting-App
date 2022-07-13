@@ -259,13 +259,17 @@ function voteElon(){
 
     techieName.textContent = 'ELON MUSK';
     countryFrom.textContent = countryToDisplay;
+    storeLS()
+
+    location.reload()
+
+    inPage = 2
 
     startConfetti();
 
     ++voteStore[signCountry].ElonCount
     ++totalElon
     nextPage()
-    storeLS()
 }
 
 function voteEdward(){
@@ -276,6 +280,8 @@ function voteEdward(){
     storeLS()
 
     location.reload()
+
+    inPage = 2
 
     startConfetti();
 
