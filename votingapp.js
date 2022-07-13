@@ -273,6 +273,9 @@ function voteEdward(){
 
     techieName.textContent = 'EDWARD CAMPBELL';
     countryFrom.textContent = countryToDisplay;
+    storeLS()
+
+    location.reload()
 
     startConfetti();
 
@@ -281,7 +284,6 @@ function voteEdward(){
 
     nextPage()
 
-    storeLS()
 }
 
 
