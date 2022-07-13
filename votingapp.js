@@ -631,4 +631,8 @@ function showAgain() {
         
     elonCountShow.textContent = totalElon
     edwardCountShow.textContent = totalEdward
+
+    elonWidth = Math.round((totalElon / (totalElon + totalEdward)) * 100)
+    edwardWidth = Math.round((totalEdward / (totalElon + totalEdward)) * 100)
+
 }
