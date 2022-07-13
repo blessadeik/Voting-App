@@ -178,12 +178,12 @@ if (edTotal) {
 let votedTotal = localStorage.getItem('votedTotal')
 
 if (votedTotal) {
-    totalVote = votedTotal
+    totalVote = Math.floor(votedTotal)
 }
 
 console.log(totalElon)
 console.log(totalEdward)
-console.log(totalElon + totalEdward)
+console.log(totalVote)
 
 let voteStoreLS = localStorage.getItem('votedStore');
 
@@ -548,3 +548,18 @@ function reVote() {
 
         stopConfetti();
 }
+
+//progress bar
+let elonBar = document.querySelector('.elon-bar')
+let elonCountShow = document.querySelector('.elon-count')
+let edwardBar = document.querySelector('.edward-bar')
+let edwardCountShow = document.querySelector('.edward-count')
+
+elonCountShow.textContent = totalElon
+edwardCountShow.textContent = totalEdward
+
+let elonWidth = Math.round((totalElon / (totalElon + totalEdward)) * 100)
+let edwardWidth = Math.round((totalEdward / (totalElon + totalEdward)) * 100)
+
+elonBar.style.width = elonWidth + '%'
+edwardBar.style.width = edwardWidth + '%'
