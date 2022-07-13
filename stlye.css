@@ -514,3 +514,10 @@ footer {
         transform: scale(min(0.7));
     }
 }
+
+
+@media (max-width: 1033px) and (min-width: 900px) {
+    article {
+        width: 440%;
+    }
+}
