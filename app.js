@@ -10,3 +10,14 @@ function moveRight () {
     
 }
 
+//menu open and close
+
+const menuIcon = document.querySelector('.menu-icon')
+const nav = document.querySelector('nav')
+const header = document.querySelector('header')
+
+menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('active')
+        nav.classList.toggle('active')
+        header.classList.toggle('active')
+})
