@@ -617,22 +617,24 @@ edwardBar.style.width = edwardWidth + '%'
 
 //try to reload last page
 function reloadLast() {    
-    sideList[3].classList.remove('active')
-    mainContent[3].classList.remove('display')
+    // sideList[3].classList.remove('active')
+    // mainContent[3].classList.remove('display')
 
     setTimeout(showAgain, 2000)
 }
 
 function showAgain() {
     
-    sideList[3].classList.add('active')
-    mainContent[3].classList.add('display')
+    // sideList[3].classList.add('active')
+    // mainContent[3].classList.add('display')
 
         
     elonCountShow.textContent = totalElon
     edwardCountShow.textContent = totalEdward
 
-
+    elonWidth = Math.round((totalElon / (totalElon + totalEdward)) * 100)
+    edwardWidth = Math.round((totalEdward / (totalElon + totalEdward)) * 100)
+    
     elonBar.style.width = elonWidth + '%'
     edwardBar.style.width = edwardWidth + '%'
 
