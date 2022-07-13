@@ -25,7 +25,7 @@ header {
     right: 0;
     z-index: 99999999999;
     background-color: #fff;
-    padding: 0 50px;
+    padding: 0 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,9 +33,13 @@ header {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
 }
 
-.logo {
-    padding: 0 43px;
+.menu-icon {
+    display: none;
 }
+
+/* .logo {
+    padding: 0 43px;
+} */
 
 .logo img {
     width: 200px;
@@ -48,7 +52,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #F5F5F5;
     gap: 88px;
     color: #434259;
 }
