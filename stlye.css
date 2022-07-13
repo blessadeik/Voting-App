@@ -464,6 +464,10 @@ footer {
     main {
         flex-direction: column;
     }
+
+    header {
+        padding: 0 max(30px);   
+    }
     
     nav {
         background-color: #F5F5F5;
@@ -495,5 +499,17 @@ footer {
         height: 50px;
         transition: all 100s ease;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 589px) {
+    .techie-images {
+        transform: scale(min(0.9));
+    }
+}
+
+@media (max-width: 509px) {
+    .techie-images {
+        transform: scale(min(0.7));
     }
 }
