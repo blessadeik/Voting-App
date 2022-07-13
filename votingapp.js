@@ -181,6 +181,26 @@ let votedTotal = localStorage.getItem('votedTotal')
 let voteStoreLS = localStorage.getItem('votedStore');
 
 
+if (elTotal) {
+    totalElon = Math.floor(elTotal)
+}
+
+
+if (edTotal) {
+    totalEdward = Math.floor(edTotal)
+}
+
+
+if (votedTotal) {
+    totalVote = Math.floor(votedTotal)
+}
+
+
+if (voteStoreLS) {
+    voteStore = JSON.parse(voteStoreLS)
+}
+
+
 countryClear.addEventListener('click', () => {
     sideList[inPage].classList.remove('active')
     mainContent[inPage].classList.remove('display')
@@ -247,6 +267,11 @@ function voteElon(){
     storeLS()
     
     //assign variables from local Storage to variables
+    let elTotal = localStorage.getItem('elTotal')
+    let edTotal = localStorage.getItem('edTotal')
+    let votedTotal = localStorage.getItem('votedTotal')
+    let voteStoreLS = localStorage.getItem('votedStore');
+
 
     if (elTotal) {
         totalElon = Math.floor(elTotal)
@@ -284,6 +309,11 @@ function voteEdward(){
     storeLS()
     
     //assign variables from local Storage to variables
+    let elTotal = localStorage.getItem('elTotal')
+    let edTotal = localStorage.getItem('edTotal')
+    let votedTotal = localStorage.getItem('votedTotal')
+    let voteStoreLS = localStorage.getItem('votedStore');
+
     if (elTotal) {
         totalElon = Math.floor(elTotal)
     }
@@ -584,3 +614,21 @@ let edwardWidth = Math.round((totalEdward / (totalElon + totalEdward)) * 100)
 
 elonBar.style.width = elonWidth + '%'
 edwardBar.style.width = edwardWidth + '%'
+
+//try to reload last page
+function reloadLast() {    
+    sideList[3].classList.remove('active')
+    mainContent[3].classList.remove('display')
+
+    setTimeout(showAgain, 2000)
+}
+
+function showAgain() {
+    
+    sideList[3].classList.add('active')
+    mainContent[3].classList.add('display')
+
+        
+    elonCountShow.textContent = totalElon
+    edwardCountShow.textContent = totalEdward
+}
