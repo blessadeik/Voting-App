@@ -526,6 +526,7 @@ function reVote() {
         agreeCheck.checked = false;
     
         inPage = 0
+        location.reload()
     
         
         sideList[inPage].classList.add('active')
