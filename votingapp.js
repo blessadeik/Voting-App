@@ -254,16 +254,13 @@ edwardCard.addEventListener('click', () => {
 const techieName = document.getElementById('techie')
 const countryFrom = document.getElementById('country-from')
 
+
 function voteElon(){
     let signCountry = allCountryAgain.indexOf(countryToDisplay)
 
     techieName.textContent = 'ELON MUSK';
     countryFrom.textContent = countryToDisplay;
     storeLS()
-
-    location.reload()
-
-    inPage = 2
 
     startConfetti();
 
@@ -278,10 +275,6 @@ function voteEdward(){
     techieName.textContent = 'EDWARD CAMPBELL';
     countryFrom.textContent = countryToDisplay;
     storeLS()
-
-    location.reload()
-
-    inPage = 2
 
     startConfetti();
 
