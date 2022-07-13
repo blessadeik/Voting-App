@@ -174,6 +174,11 @@ function StateObj() {
 
 // console.log(ibadan)
 
+//assign variables from local Storage to variables
+let elTotal = localStorage.getItem('elTotal')
+let edTotal = localStorage.getItem('edTotal')
+let votedTotal = localStorage.getItem('votedTotal')
+let voteStoreLS = localStorage.getItem('votedStore');
 
 
 countryClear.addEventListener('click', () => {
@@ -242,25 +247,21 @@ function voteElon(){
     storeLS()
     
     //assign variables from local Storage to variables
-    let elTotal = localStorage.getItem('elTotal')
 
     if (elTotal) {
         totalElon = Math.floor(elTotal)
     }
 
-    let edTotal = localStorage.getItem('edTotal')
 
     if (edTotal) {
         totalEdward = Math.floor(edTotal)
     }
 
-    let votedTotal = localStorage.getItem('votedTotal')
 
     if (votedTotal) {
         totalVote = Math.floor(votedTotal)
     }
 
-    let voteStoreLS = localStorage.getItem('votedStore');
 
     if (voteStoreLS) {
         voteStore = JSON.parse(voteStoreLS)
@@ -283,25 +284,20 @@ function voteEdward(){
     storeLS()
     
     //assign variables from local Storage to variables
-    let elTotal = localStorage.getItem('elTotal')
-
     if (elTotal) {
         totalElon = Math.floor(elTotal)
     }
 
-    let edTotal = localStorage.getItem('edTotal')
 
     if (edTotal) {
         totalEdward = Math.floor(edTotal)
     }
 
-    let votedTotal = localStorage.getItem('votedTotal')
 
     if (votedTotal) {
         totalVote = Math.floor(votedTotal)
     }
 
-    let voteStoreLS = localStorage.getItem('votedStore');
 
     if (voteStoreLS) {
         voteStore = JSON.parse(voteStoreLS)
