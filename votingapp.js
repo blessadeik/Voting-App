@@ -162,34 +162,6 @@ function storeLS () {
     localStorage.setItem('displayedCountry', countryToDisplay)
 }
 
-//assign variables from local Storage to variables
-let elTotal = localStorage.getItem('elTotal')
-
-if (elTotal) {
-    totalElon = Math.floor(elTotal)
-}
-
-let edTotal = localStorage.getItem('edTotal')
-
-if (edTotal) {
-    totalEdward = Math.floor(edTotal)
-}
-
-let votedTotal = localStorage.getItem('votedTotal')
-
-if (votedTotal) {
-    totalVote = Math.floor(votedTotal)
-}
-
-console.log(totalElon)
-console.log(totalEdward)
-console.log(totalVote)
-
-let voteStoreLS = localStorage.getItem('votedStore');
-
-if (voteStoreLS) {
-    voteStore = JSON.parse(voteStoreLS)
-}
 
 //class Constructor for objects
 function StateObj() {
@@ -268,6 +240,31 @@ function voteElon(){
     nextPage()
     
     storeLS()
+    
+    //assign variables from local Storage to variables
+    let elTotal = localStorage.getItem('elTotal')
+
+    if (elTotal) {
+        totalElon = Math.floor(elTotal)
+    }
+
+    let edTotal = localStorage.getItem('edTotal')
+
+    if (edTotal) {
+        totalEdward = Math.floor(edTotal)
+    }
+
+    let votedTotal = localStorage.getItem('votedTotal')
+
+    if (votedTotal) {
+        totalVote = Math.floor(votedTotal)
+    }
+
+    let voteStoreLS = localStorage.getItem('votedStore');
+
+    if (voteStoreLS) {
+        voteStore = JSON.parse(voteStoreLS)
+    }
 }
 
 function voteEdward(){
@@ -284,6 +281,31 @@ function voteEdward(){
     nextPage()
 
     storeLS()
+    
+    //assign variables from local Storage to variables
+    let elTotal = localStorage.getItem('elTotal')
+
+    if (elTotal) {
+        totalElon = Math.floor(elTotal)
+    }
+
+    let edTotal = localStorage.getItem('edTotal')
+
+    if (edTotal) {
+        totalEdward = Math.floor(edTotal)
+    }
+
+    let votedTotal = localStorage.getItem('votedTotal')
+
+    if (votedTotal) {
+        totalVote = Math.floor(votedTotal)
+    }
+
+    let voteStoreLS = localStorage.getItem('votedStore');
+
+    if (voteStoreLS) {
+        voteStore = JSON.parse(voteStoreLS)
+    }
 }
 
 
