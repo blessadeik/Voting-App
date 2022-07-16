@@ -639,3 +639,18 @@ function showAgain() {
     edwardBar.style.width = edwardWidth + '%'
 
 }
+
+//svg-last scripting
+const lastSvg = document.querySelector('.svg-last')
+const lastSvgs = lastSvg.children
+const firstSvg = document.querySelector('.svg-one').children
+const svgText = lastSvg.querySelectorAll('text')
+
+console.log(firstSvg[1].getAttribute('id'))
+console.log(lastSvgs[117])
+console.log(svgText[1])
+
+
+for (let i = 0; i < 56; i++) {
+  svgText[i].innerHTML += `<title>${firstSvg[i].getAttribute('id')} | Elon Count: 0 | Edward Count: 0</title>`
+}
