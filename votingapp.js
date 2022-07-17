@@ -78,6 +78,7 @@ let countryToDisplay;
 let allCountry = []
 let allCountryAgain = []
 
+
 stateArr.forEach((state) => {
     state.addEventListener('click', () => {
         countryToDisplay = state.id
@@ -638,6 +639,8 @@ function showAgain() {
     elonBar.style.width = elonWidth + '%'
     edwardBar.style.width = edwardWidth + '%'
 
+    noNameAgain()
+
 }
 
 //svg-last scripting
@@ -651,9 +654,11 @@ console.log(firstSvg[1].getAttribute('class'))
 // console.log(svgText[0])
 
 let arrFirstSvg = [] 
-let arrLastSvg = [] 
+let arrLastSvg = []  
+let arrLastSvgs = [] 
 let firstSvgClass = []
 let lastSvgClass = []
+let lastSvgsClass = []
 
 for (let i = 0; i < firstSvg.length; i++) {
   if (firstSvg[i].getAttribute('class') != null){
@@ -675,9 +680,37 @@ for (let q = 0; q < arrLastSvg.length; q++) {
   lastSvgClass.push(arrLastSvg[q].slice(-2))
 }
 
-for (let i = 0; i < firstSvgClass.length; i++) {
+console.log(lastSvgs[55])
+console.log(firstSvg[55])
+
+
+for (let i = 0; i < lastSvgs.length; i++) {
+  if (lastSvgs[i].getAttribute('class') != null){
+    arrLastSvgs.push(lastSvgs[i].getAttribute('class'))
+  }
+}
+
+for (let q = 0; q < arrLastSvgs.length; q++) {
+  lastSvgsClass.push(arrLastSvgs[q].slice(-2))
+}
+
+
+
+function noNameAgain() {
+  for (let bey = 1; bey < 57; bey++) {
+    if (voteStore[bey].EdwardCount < voteStore[bey].ElonCount) {
+      lastSvgs[bey].setAttribute('fill', 'blue')
+    }
+    
+    if (voteStore[bey].EdwardCount > voteStore[bey].ElonCount) {
+      lastSvgs[bey].setAttribute('fill', 'red')
+    }
+  }
+  
+  for (let i = 0; i < firstSvgClass.length; i++) {
   let firstStore 
   let secondStore
+  let thirdStore
   let againStore = i
 
   firstStore = firstSvgClass[i]
@@ -688,18 +721,18 @@ for (let i = 0; i < firstSvgClass.length; i++) {
     }
   }
 
+  for (let t = 0; t < lastSvgsClass.length; t++) {
+    if (lastSvgsClass[t] === firstStore) {
+      thirdStore = t
+    }
+  }
+
     svgText[secondStore].innerHTML += `<title>${firstSvg[secondStore].getAttribute('id')} | Elon Count: ${voteStore[i].ElonCount} | Edward Count: ${voteStore[i].EdwardCount}</title>`
 
-
-
-
-    if (voteStore[againStore].EdwardCount < voteStore[againStore].ElonCount) {
-      lastSvgs[againStore].setAttribute('fill', 'blue')
-    }
-    
-    if (voteStore[againStore].EdwardCount > voteStore[againStore].ElonCount) {
-      lastSvgs[againStore].setAttribute('fill', 'red')
-    }
-
-  console.log(againStore)
+  // console.log(againStore)
 }
+
+
+}
+
+window.addEventListener('load', noNameAgain)
