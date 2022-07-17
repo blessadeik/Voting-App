@@ -647,8 +647,8 @@ const firstSvg = document.querySelector('.svg-one').children
 const svgText = lastSvg.querySelectorAll('text')
 
 console.log(firstSvg[1].getAttribute('id'))
-console.log(lastSvgs[117])
-console.log(svgText[1])
+console.log(lastSvgs[60])
+console.log(svgText[0])
 
 
 for (let i = 0; i < 56; i++) {
