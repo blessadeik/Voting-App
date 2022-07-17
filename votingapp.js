@@ -646,11 +646,60 @@ const lastSvgs = lastSvg.children
 const firstSvg = document.querySelector('.svg-one').children
 const svgText = lastSvg.querySelectorAll('text')
 
-console.log(firstSvg[1].getAttribute('id'))
-console.log(lastSvgs[60])
-console.log(svgText[0])
+console.log(firstSvg[1].getAttribute('class'))
+// console.log(lastSvgs[60])
+// console.log(svgText[0])
+
+let arrFirstSvg = [] 
+let arrLastSvg = [] 
+let firstSvgClass = []
+let lastSvgClass = []
+
+for (let i = 0; i < firstSvg.length; i++) {
+  if (firstSvg[i].getAttribute('class') != null){
+    arrFirstSvg.push(firstSvg[i].getAttribute('class'))
+  }
+}
+
+for (let q = 0; q < arrFirstSvg.length; q++) {
+  firstSvgClass.push(arrFirstSvg[q].slice(-2))
+}
+
+for (let i = 0; i < svgText.length; i++) {
+  if (svgText[i].getAttribute('class') != null){
+    arrLastSvg.push(svgText[i].getAttribute('class'))
+  }
+}
+
+for (let q = 0; q < arrLastSvg.length; q++) {
+  lastSvgClass.push(arrLastSvg[q].slice(-2))
+}
+
+for (let i = 0; i < firstSvgClass.length; i++) {
+  let firstStore 
+  let secondStore
+  let againStore = i
+
+  firstStore = firstSvgClass[i]
+
+  for (let s = 0; s < lastSvgClass.length; s++) {
+    if (lastSvgClass[s] === firstStore) {
+      secondStore = s
+    }
+  }
+
+    svgText[secondStore].innerHTML += `<title>${firstSvg[secondStore].getAttribute('id')} | Elon Count: ${voteStore[i].ElonCount} | Edward Count: ${voteStore[i].EdwardCount}</title>`
 
 
-for (let i = 0; i < 56; i++) {
-  svgText[i].innerHTML += `<title>${firstSvg[i].getAttribute('id')} | Elon Count: 0 | Edward Count: 0</title>`
+
+
+    if (voteStore[againStore].EdwardCount < voteStore[againStore].ElonCount) {
+      lastSvgs[againStore].setAttribute('fill', 'blue')
+    }
+    
+    if (voteStore[againStore].EdwardCount > voteStore[againStore].ElonCount) {
+      lastSvgs[againStore].setAttribute('fill', 'red')
+    }
+
+  console.log(againStore)
 }
